@@ -287,16 +287,16 @@ public class FlutterLocalNotificationsPlugin implements MethodCallHandler, Plugi
         long repeatInterval = 0;
         switch (notificationDetails.repeatInterval) {
             case EveryMinute:
-                repeatInterval = 60000;
+                repeatInterval = 60000 * 10;
                 break;
             case Hourly:
                 repeatInterval = 60000 * 60;
                 break;
             case Daily:
-                repeatInterval = 60000 * 60 * 24;
+                repeatInterval = 60000 * 15;
                 break;
             case Weekly:
-                repeatInterval = 60000 * 60 * 24 * 7;
+                repeatInterval = 60000 * 30;
                 break;
             default:
                 break;
